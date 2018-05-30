@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.register-1{
+    background: url("../image/火影5.jpg") no-repeat;
+    background-size: 1349px 641px;
+    width: 1349px;
+    height: 641px;
+    position: relative;
+}
+.register {
+    width: 300px;
+    height: 372px;
+    /*background-color: rgba(0,0,0,0.5);*/
+    /*margin: 100px auto;*/
+    margin-left: 516px;
+    /*margin-top: 244px;*/
+    position: absolute;
+    top:244px;
+}
+.register-welcome {
+    color: #ff64c2;
+    width: 100px;
+    height: 72px;
+    line-height: 100px;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 20px;
+}
+.register-user {
+    width: 240px;
+    height: 263px;
+    /*background-color: rgba(0,0,0,0.5);*/
+    margin: 10px auto;
+}
+/*td 的整体设置*/
+.login-tr {
+    display: inline-block;
+    width: 240px;
+    margin: 5px 0;
+}
+.login-td {
+    width:100px;
+    color: blue;
+    font-size: 14px;
+}
+.login-td2 {
+    width:200px;
+}
+.register-get input{
+    width: 50px;
+    height: 30px;
+    color: #ff3390;
+    background-color: whitesmoke;
+    /*margin-left: auto;*/
+    margin-left: 100px;
+    margin-top: 20px;
+}
+.register-get input:hover{
+    background-color: rgba(0,0,0,0.5);
+}
