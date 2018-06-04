@@ -3,6 +3,8 @@ package com.example.demo.controller;
 import com.example.demo.service.TestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 
 /**
@@ -10,17 +12,16 @@ import org.springframework.stereotype.Controller;
  */
 @Controller
 public class ControllerIndex {
-      /*你好*/
+    /*你好*/
     @Autowired
     private TestService testService;
 
-   /* @RequestMapping("index")
+    @RequestMapping("index")
     @ResponseBody
-    public Map<String,Integer>  index(){
-       *//* Map<String, Integer> map = new Map<String, Integer>();*//*
+    public String index() {
+       /* Map<String, Integer> map = new Map<String, Integer>();*/
         Integer a = testService.getCount();
         System.out.println("是否执行");
         return "";
-    }*/
-
+    }
 }
