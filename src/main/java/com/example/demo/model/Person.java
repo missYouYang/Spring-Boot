@@ -7,6 +7,7 @@ public class Person {
 
     private int id;
     private String name;
+    private String password;
     private int age;
     private String sex;
 
@@ -40,5 +41,13 @@ public class Person {
 
     public void setSex(String sex) {
         this.sex = sex;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }

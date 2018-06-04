@@ -14,9 +14,10 @@ function user_login(){
     }
     if (password.value == "请输入用户名" || password.value == "" ){
         document.getElementById("password_error").innerHTML = "<div style='color: #FF0000; text-align: center'>你好请输入用户密码</div>";
+        return false;
     }else {
         document.getElementById("password_error").innerHTML = "";
-        return false;
+
     }
 
 }
