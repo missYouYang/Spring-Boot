@@ -1,10 +1,11 @@
 package com.example.demo.controller;
 
-import com.example.demo.model.Person;
+import com.example.demo.model.User;
 import com.example.demo.notService.ServiceNote;
 import com.example.demo.service.TestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpServletRequest;
@@ -29,10 +30,14 @@ public class ControllerIndex {
     }
     @RequestMapping("/login")
     @ServiceNote(desc = "用户登录",auth = ServiceNote.AUTH.PUBLIC)
-    private String userLogin(HttpServletResponse response, HttpServletRequest request, Person username,Person password){
+    public String userLogin(HttpServletResponse response, HttpServletRequest request, String userName,String password){
 
-        System.out.println(username +"........."+password);
+        User user = testService.getUserByUserNameAndPassword(userName,password);
+        if(StringUtils.isEmpty(user)){
 
+            return "login";
+        }
         return "success";
+
     }
 }

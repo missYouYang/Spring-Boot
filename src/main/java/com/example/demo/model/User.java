@@ -3,28 +3,25 @@ package com.example.demo.model;
 /**
  * Created by Lenovo on 2018/5/28.
  */
-public class Person {
+public class User {
 
+    //用户id
     private int id;
-    private String name;
+    //用户登入名
+    private String userName;
+    //用户密码
     private String password;
+    //年龄
     private int age;
+    //性别
     private String sex;
-
+    //创建时间
     public int getId() {
         return id;
     }
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public int getAge() {
@@ -49,5 +46,13 @@ public class Person {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 }

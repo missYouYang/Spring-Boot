@@ -1,5 +1,6 @@
 package com.example.demo.dao;
 
+import com.example.demo.model.User;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -8,5 +9,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface UserMapper {
 
-    Integer getCount();
+
+    User getUserByUserNameAndPassword(String userName, String password);
+
 }
