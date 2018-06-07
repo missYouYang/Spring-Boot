@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.util.StringUtils;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 
@@ -20,20 +21,20 @@ public class ControllerIndex {
     @Autowired
     private TestService testService;
 
-    @RequestMapping("/test")
+    @RequestMapping(value = "{index}")
     @ServiceNote(desc = "登入界面",auth = ServiceNote.AUTH.PUBLIC)
-    public String login() {
+    public String login(@PathVariable("index") String index) {
 
-        return "login";
+        return index;
     }
-    @RequestMapping("/login")
+    @RequestMapping("/userLogin")
     @ServiceNote(desc = "用户登录",auth = ServiceNote.AUTH.PUBLIC)
     public String userLogin(ModelMap map, String userName, String password){
 
         User user = testService.getUserByUserNameAndPassword(userName,password);
         if(StringUtils.isEmpty(user)){
 
-           /* map.put("message","你输入的用户或密码不正确");*/
+            map.put("message","你输入的用户或密码不正确");
             return "forward:test";
         }
         return "success";

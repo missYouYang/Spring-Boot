@@ -10,7 +10,7 @@
 <body marginwidth="0" marginheight="0">
 <div class="login">
     <div class="login-box">
-        <form action="/user/login" method="get" id="form_login" onsubmit="return user_login()">
+        <form action="/user/userLogin" method="get" id="form_login" onsubmit="return user_login()">
             <div class="user-login">密码登入</div>
 
             <!--//用户-->
@@ -27,7 +27,7 @@
             <!-- //登入,注册按钮-->
             <div class="login-button">
                 <input type="submit" value="登入" class="login-button-input" id="userLogin" name="login" >
-                <input type="button" value="注册" class="login-button-input2" name="register">
+                <input type="button" value="注册" class="login-button-input2" onclick="user_register()">
             </div>
         </form>
     </div>

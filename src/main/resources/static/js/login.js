@@ -20,5 +20,7 @@ function user_login(){
         document.getElementById("password_error").innerHTML = "";
 
     }
-
+}
+function user_register() {
+    window.location=("register");
 }
