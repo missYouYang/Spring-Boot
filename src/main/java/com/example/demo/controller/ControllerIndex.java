@@ -10,6 +10,9 @@ import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 
 /**
  * Created by Lenovo on 2018/5/24.
@@ -36,8 +39,18 @@ public class ControllerIndex {
 
             map.put("message","你输入的用户或密码不正确");
             return "forward:test";
+        }else {
+            map.put("message","恭喜登入成功");
+            return "success";
         }
-        return "success";
+    }
+    @RequestMapping("/userRegister")
+    @ServiceNote(desc = "用户注册",auth = ServiceNote.AUTH.PUBLIC)
+    public String userRegister(HttpServletRequest request, HttpServletResponse response,User user){
 
+        System.out.println(user.getAge());
+        request.setAttribute("success","恭喜注册成功");
+
+        return "success";
     }
 }

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>注册页面</title>
     <link href="../css/register.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="../js/register.js"></script>
 </head>
 <body  marginwidth="0" marginheight="0">
     <div class="register-1">
@@ -12,7 +13,7 @@
             <div class="register-welcome">欢迎注册</div>
 
             <div class="register-user">
-                <form action="login.html">
+                <form action="userRegister" method="post">
                     <table>
                         <tr class="login-tr">
                             <td class="login-td">用户名</td>
@@ -23,13 +24,13 @@
                         <tr class="login-tr">
                             <td class="login-td">密码</td>
                             <td class=".login-td2">
-                                <input type="text" name="password" id="password"  />
+                                <input type="password" name="password" id="password"  />
                             </td>
                         </tr>
                         <tr class="login-tr">
                             <td class="login-td">密码确认</td>
                             <td class=".login-td2">
-                                <input type="text" name="rePassword" id="rePassword" />
+                                <input type="password" name="rePassword" id="rePassword" />
                             </td>
                         </tr>
                         <tr class="login-tr">
@@ -41,12 +42,12 @@
                         <tr class="login-tr">
                             <td class="login-td">性别</td>
                             <td>
-                                男<input type="radio" name="sex" id="sex" value="1" />
-                                女<input type="radio" name="sex" id="sex2" value="0" />
+                                男<input type="radio" name="sex" id="sex" value="男" />
+                                女<input type="radio" name="sex" id="sex2" value="女" />
                             </td>
                         </tr>
                         <tr>
-                            <td colspan="2" class="register-get">
+                            <td colspan="2" class="register-get" >
                                 <input type="submit" id="" value="注册" />
                             </td>
                         </tr>
