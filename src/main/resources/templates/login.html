@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>登入页面</title>
@@ -11,10 +12,12 @@
     <div class="login-box">
         <form action="/user/login" method="get" id="form_login" onsubmit="return user_login()">
             <div class="user-login">密码登入</div>
+
             <!--//用户-->
             <div class="userName-login">
                 <input type="text" class="login-userName-input" name="userName" id="userName"  placeholder="请输入用户名">
-                <div id="username_error"></div>
+                <div id="username_error" ></div>
+                <div id="username2_error" th:text="${message}" style="color: red; font-size: 16px ;text-align: center"></div>
             </div>
             <!--//m密码-->
             <div class="userName-login">
