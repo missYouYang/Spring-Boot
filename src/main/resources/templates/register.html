@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>注册页面</title>
-    <link href="../css/register.css" rel="stylesheet" type="text/css">
-    <script type="text/javascript" src="../js/register.js"></script>
+    <link href="../static/css/register.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="../static/js/register.js"></script>
+
+   <!-- <link href="../css/register.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="../js/register.js"></script>-->
 </head>
 <body  marginwidth="0" marginheight="0">
     <div class="register-1">
@@ -13,7 +16,7 @@
             <div class="register-welcome">欢迎注册</div>
 
             <div class="register-user">
-                <form action="userRegister" method="post">
+                <form action="userRegister" method="post" onsubmit="return user2_register()">
                     <table>
                         <tr class="login-tr">
                             <td class="login-td">用户名</td>
@@ -24,13 +27,15 @@
                         <tr class="login-tr">
                             <td class="login-td">密码</td>
                             <td class=".login-td2">
-                                <input type="password" name="password" id="password"  />
+                                <input type="password" name="password" id="password" onblur="p_a()">
+
                             </td>
                         </tr>
                         <tr class="login-tr">
                             <td class="login-td">密码确认</td>
                             <td class=".login-td2">
-                                <input type="password" name="rePassword" id="rePassword" />
+                                <input type="password" name="rePassword" id="rePassword" onblur="p_a()"/>
+                                <div id="error_password"></div>
                             </td>
                         </tr>
                         <tr class="login-tr">

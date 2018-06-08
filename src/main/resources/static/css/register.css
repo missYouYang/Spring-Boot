@@ -17,7 +17,7 @@ body {
     margin-left: 516px;
     /*margin-top: 244px;*/
     position: absolute;
-    top:244px;
+    top:222px;
 }
 .register-welcome {
     color: #ff64c2;
@@ -38,7 +38,7 @@ body {
 .login-tr {
     display: inline-block;
     width: 240px;
-    margin: 5px 0;
+    margin: 8px 0;
 }
 .login-td {
     width:100px;
