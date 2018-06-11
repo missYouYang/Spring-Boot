@@ -10,4 +10,6 @@ public interface TestService {
 
 
     User getUserByUserNameAndPassword(String userName, String password);
+
+    int addUser(User user);
 }

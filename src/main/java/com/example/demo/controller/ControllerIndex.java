@@ -38,9 +38,9 @@ public class ControllerIndex {
         if(StringUtils.isEmpty(user)){
 
             map.put("message","你输入的用户或密码不正确");
-            return "forward:test";
+            return "forward:login";
         }else {
-            map.put("message","恭喜登入成功");
+            map.put("success","恭喜登入成功");
             return "success";
         }
     }
@@ -48,9 +48,14 @@ public class ControllerIndex {
     @ServiceNote(desc = "用户注册",auth = ServiceNote.AUTH.PUBLIC)
     public String userRegister(HttpServletRequest request, HttpServletResponse response,User user){
 
-        System.out.println(user.getAge());
-        request.setAttribute("success","恭喜注册成功");
+       int a =  testService.addUser(user);
 
-        return "success";
+        if(a == 1){
+            request.setAttribute("message","恭喜注册成功");
+            return "success";
+        }else {
+            request.setAttribute("success","注册失败");
+            return "login";
+        }
     }
 }

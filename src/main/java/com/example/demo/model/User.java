@@ -1,5 +1,7 @@
 package com.example.demo.model;
 
+import java.util.Date;
+
 /**
  * Created by Lenovo on 2018/5/28.
  */
@@ -11,25 +13,25 @@ public class User {
     private String userName;
     //用户密码
     private String password;
-    //年龄
-    private int age;
     //性别
     private String sex;
     //创建时间
+    private Date updatetime;
+
+    public Date getUpdatetime() {
+        return updatetime;
+    }
+
+    public void setUpdatetime(Date updatetime) {
+        this.updatetime = updatetime;
+    }
+
     public int getId() {
         return id;
     }
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
     }
 
     public String getSex() {
