@@ -35,15 +35,22 @@ body {
     margin: 10px auto;
 }
 /*td 的整体设置*/
+/*.login-tr {
+    display: inline-block;
+    width: 240px;
+    margin: 12px 0;
+}*/
 .login-tr {
     display: inline-block;
     width: 240px;
-    margin: 8px 0;
+    margin-top: 0;
+    padding: 0;
 }
 .login-td {
     width:100px;
     color: blue;
     font-size: 14px;
+    margin: 0;
 }
 .login-td2 {
     width:200px;
@@ -61,4 +68,13 @@ body {
 }
 .register-get input:hover{
     background-color: rgba(0,0,0,0.1);
+}
+.error_password {
+    width: 173px;
+    height: 12px;
+    margin-top: 2px;
+    margin-left: auto;
+    color: red;
+    font-size: 12px;
+    text-align: center;
 }

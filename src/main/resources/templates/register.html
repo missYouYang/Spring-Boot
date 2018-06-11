@@ -16,32 +16,34 @@
             <div class="register-welcome">欢迎注册</div>
 
             <div class="register-user">
-                <form action="userRegister" method="post" onsubmit="return user2_register()">
+                <form action="userRegister" method="post" onsubmit="return u_register()">
                     <table>
                         <tr class="login-tr">
                             <td class="login-td">用户名</td>
                             <td class=".login-td2">
-                                <input type="text" name="userName" id="userName" />
+                                <input type="text" name="userName" id="userName" onblur="p_a()"/>
+                                <div id="error_password1" class="error_password"></div>
                             </td>
                         </tr>
                         <tr class="login-tr">
                             <td class="login-td">密码</td>
                             <td class=".login-td2">
                                 <input type="password" name="password" id="password" onblur="p_a()">
-
+                                <div id="error_password" class="error_password"></div>
                             </td>
                         </tr>
                         <tr class="login-tr">
                             <td class="login-td">密码确认</td>
                             <td class=".login-td2">
                                 <input type="password" name="rePassword" id="rePassword" onblur="p_a()"/>
-                                <div id="error_password"></div>
+                                <div id="error_password4" class="error_password"></div>
                             </td>
                         </tr>
                         <tr class="login-tr">
                             <td class="login-td">电话</td>
                             <td class=".login-td2">
-                                <input type="text" name="telPhone" id="telPhone"  />
+                                <input type="text" name="telPhone" id="telPhone"  onblur="p_a()"/>
+                                <div id="error_password2" class="error_password"></div>
                             </td>
                         </tr>
                         <tr class="login-tr">
@@ -49,6 +51,7 @@
                             <td>
                                 男<input type="radio" name="sex" id="sex" value="男" />
                                 女<input type="radio" name="sex" id="sex2" value="女" />
+                                <div id="error_password3" class="error_password"></div>
                             </td>
                         </tr>
                         <tr>
