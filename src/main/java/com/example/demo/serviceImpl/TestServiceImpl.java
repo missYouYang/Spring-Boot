@@ -20,16 +20,16 @@ public class TestServiceImpl implements TestService {
     @Override
     public User getUserByUserNameAndPassword(String userName, String password) {
 
-        User user = userMapper.getUserByUserNameAndPassword(userName,password);
+        User user = userMapper.getUserByUserNameAndPassword(userName, password);
 
         return user;
     }
 
     @Override
     public int addUser(User user) {
-       Date date = new Date();
-       user.setUpdatetime(date);
-       int a = userMapper.addUser(user);
+        Date date = new Date();
+        user.setUpDateTime(date);
+        int a = userMapper.addUser(user);
         return a;
     }
 }

@@ -1,10 +1,16 @@
 package com.example.demo.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created by Lenovo on 2018/5/28.
  */
+@Data
+@AllArgsConstructor
 public class User {
 
     //用户id
@@ -16,45 +22,19 @@ public class User {
     //性别
     private String sex;
     //创建时间
-    private Date updatetime;
+    private Date upDateTime;
+    //性别
+    private List<Role> role;
 
-    public Date getUpdatetime() {
-        return updatetime;
+    public User(){
+
     }
 
-    public void setUpdatetime(Date updatetime) {
-        this.updatetime = updatetime;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
+    public User(int id,String userName,String password,List<Role> role){
         this.id = id;
-    }
-
-    public String getSex() {
-        return sex;
-    }
-
-    public void setSex(String sex) {
-        this.sex = sex;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
         this.userName = userName;
+        this.password = password;
+        this.role = role;
+
     }
 }
